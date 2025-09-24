@@ -1,4 +1,4 @@
-/* Remove default top margin from work and reduce margin-bottom from about */
+/* Reduced margin between about and work */
 #about {
   margin-bottom: 2rem !important;
 }
@@ -18,7 +18,7 @@
 }
 
 .contact-grid a {
-  color: var(--primary-color);
+  color: var(#007acc);
   text-decoration: none;
 }
 
@@ -34,7 +34,7 @@ iframe {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   margin-top: 1rem;
   border: none;
-  height: 1000px; /* You can make this responsive with JS or CSS if desired */
+  height: 1000px;
 }
 
 /* Remove testimonial styles if any */
