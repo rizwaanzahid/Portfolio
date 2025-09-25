@@ -1,3 +1,18 @@
+/* Basic reset and base font */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
 /* Reduced margin between about and work */
 #about {
   margin-bottom: 2rem !important;
@@ -7,18 +22,58 @@
   margin-top: 0 !important;
 }
 
-/* Contact section styled as grid */
+/* Header styling */
+header.site-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+header.site-header .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007acc;
+  text-decoration: none;
+}
+
+nav.site-nav a {
+  margin-left: 1rem;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a:focus {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #007acc;
+}
+
+/* Contact section styled as responsive grid */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto 2rem;
   font-size: 1.1rem;
 }
 
 .contact-grid a {
-  color: #007acc; /* Corrected color */
+  color: #007acc;
   text-decoration: none;
 }
 
@@ -29,7 +84,7 @@
 
 /* Iframe for embedded resume */
 iframe {
-  max-width: 100%;
+  width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   margin-top: 1rem;
@@ -37,7 +92,15 @@ iframe {
   height: 1000px;
 }
 
-/* Remove testimonial styles if any */
+/* Hide testimonials if any */
 #testimonials {
   display: none !important;
+}
+
+/* Footer styling */
+.site-footer {
+  text-align: center;
+  margin: 2rem 0;
+  color: #666;
+  font-size: 0.9rem;
 }
