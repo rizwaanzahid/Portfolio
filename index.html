@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Creative campaigns, strategic communications, and data-driven marketing that delivers results." />
   <style>
-    /* Base reset */
     *, *::before, *::after { box-sizing: border-box; }
     body {
       font-family: 'Arial', sans-serif;
@@ -15,17 +14,13 @@
       line-height: 1.5;
       background: #fff;
     }
-
     a {
       color: #007acc;
       text-decoration: none;
     }
-
     a:hover, a:focus {
       text-decoration: underline;
     }
-
-    /* Header */
     header.site-header {
       max-width: 960px;
       margin: 0 auto 2rem;
@@ -35,48 +30,39 @@
       padding: 0 1rem;
       border-bottom: 2px solid #007acc;
     }
-
     header.site-header .brand {
       font-size: 1.75rem;
       font-weight: 700;
       color: #007acc;
     }
-
     nav.site-nav a {
       margin-left: 1.5rem;
       font-weight: 600;
       text-transform: uppercase;
       font-size: 0.9rem;
     }
-
-    /* Hero */
     section.hero .hero-inner {
       max-width: 960px;
       margin: 0 auto 2rem;
       text-align: center;
       padding: 0 1rem;
     }
-
     section.hero h1 {
       font-size: 2.5rem;
       color: #007acc;
       margin-bottom: 0.3rem;
       font-weight: 700;
     }
-
     section.hero p.sub {
       font-size: 1.15rem;
       font-weight: 400;
       color: #444;
     }
-
-    /* Sections */
     section.section {
       max-width: 960px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-
     section.section h2 {
       font-size: 1.8rem;
       font-weight: 700;
@@ -85,8 +71,6 @@
       border-bottom: 1px solid #ddd;
       padding-bottom: 0.5rem;
     }
-
-    /* Contact grid */
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -95,28 +79,20 @@
       max-width: 600px;
       margin: auto;
     }
-
-    /* Resume iframe */
-    iframe {
+    iframe, video {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       border: none;
-      height: 850px;
       margin-top: 1rem;
     }
-
-    /* Footer */
+    iframe { height: 850px; }
+    video { max-height: 480px; }
     footer.site-footer {
       text-align: center;
       margin: 3rem 1rem;
       font-size: 0.9rem;
       color: #666;
-    }
-
-    /* Responsive nav toggle - optional */
-    .nav-toggle {
-      display: none; /* Add toggle and responsive styles if needed */
     }
   </style>
 </head>
@@ -147,11 +123,44 @@
 
     <section id="work" class="section">
       <h2>Selected Work</h2>
-      <ul>
-        <li><strong>ECON 1002 - Introduction to Macroeconomics</strong><br />Developed and managed a course in Brightspace LMS with comprehensive online modules, quizzes, and student support materials aligned to adult learning principles and organizational priorities.</li>
-        <li><strong>Creative Campaigns</strong><br />Strategized and executed targeted multimedia campaigns with measurable engagement growth.</li>
-        <li><strong>Brand Storytelling</strong><br />Crafted compelling narratives to elevate brand presence across digital platforms.</li>
-      </ul>
+
+      <div>
+        <h3>Course Development</h3>
+        <p>ECON 1002 - Introduction to Macroeconomics</p>
+        <p>Developed and managed a course in Brightspace LMS with comprehensive online modules, quizzes, and student support materials aligned to adult learning principles and organizational priorities.</p>
+        <a href="assets/canch4-recap.pdf" target="_blank" rel="noopener">View Course Recap PDF</a>
+      </div>
+
+      <div>
+        <h3>Iron Ring Campaign</h3>
+        <img src="assets/iron-ring-poster.jpg" alt="Iron Ring Poster" style="max-width:100%; height:auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);" />
+        <p>Watch the Reel:</p>
+        <video controls style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+          <source src="assets/iron-ring-reel.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div>
+        <h3>Resume</h3>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">View Full Resume (PDF)</a>
+      </div>
+
+      <div>
+        <h3>WEIIT Impact Report</h3>
+        <a href="assets/wieit-impact-report.pdf" target="_blank" rel="noopener">Download Impact Report (PDF)</a>
+      </div>
+
+      <div>
+        <h3>University</h3>
+        <a href="https://www.instagram.com/carleton_engdesign/?hl=en" target="_blank" rel="noopener">Carleton Engineering Design Instagram</a>
+      </div>
+
+      <div>
+        <h3>Additional Video</h3>
+        <iframe src="https://player.vimeo.com/video/818420627" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="border-radius: 8px;"></iframe>
+      </div>
+
     </section>
 
     <section id="resume" class="section">
