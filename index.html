@@ -50,6 +50,21 @@
       color: #f3f4fe;
       font-size: 1.15rem;
     }
+    
+    .nav-toggle {
+      display: none;
+      position: absolute;
+      right: 1rem;
+      top: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      z-index: 20;
+    }
+    
     nav {
       margin-top: -1.2rem;
       display: flex;
@@ -62,6 +77,8 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1.1px;
+      position: relative;
+      z-index: 10;
     }
     nav a {
       color: #6C63FF;
@@ -190,6 +207,21 @@
       color: #3936bd;
       font-weight: 700;
     }
+    
+    @media(max-width: 700px) {
+      nav {
+        flex-direction: column;
+        padding: 0.5rem 0;
+        display: none;
+      }
+      nav.open {
+        display: flex;
+      }
+      .nav-toggle {
+        display: block;
+      }
+    }
+
     @media(max-width: 600px){
       .cards, .work-grid { flex-direction: column; grid-template-columns: 1fr; }
       main { padding: 0 0.15rem; }
@@ -202,6 +234,7 @@
     <div class="avatar"><span>RZ</span></div>
     <h1>Rizwaan Zahid</h1>
     <p>Marketing & Communications | Digital Strategy | Brand Storytelling</p>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </div>
   <nav>
     <a href="#about">About</a>
@@ -215,7 +248,8 @@
       <section id="about" class="card">
         <h2>About Me</h2>
         <p>
-          Marketing and communications professional experienced in creative campaigns, brand storytelling, digital strategy, and supporting measurable business results. </p>
+          Marketing and communications professional experienced in creative campaigns, brand storytelling, digital strategy, and supporting measurable business results.
+        </p>
       </section>
       <section id="skills" class="card">
         <h2>Skillset</h2>
@@ -250,7 +284,7 @@
         </div>
         <div class="work-card">
           <h3>University</h3>
-          <a href="https://www.instagram.com/carleton_engdesign/?hl=en" target="_blank" rel="noopener">Carleton Engineering Design Instagram</a>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CsFyiJhJpop/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
         </div>
         <div class="work-card">
           <h3>USC - Hard to Study When You're Hungry Campaign</h3>
@@ -283,9 +317,19 @@
   <footer>
     <p>© <span id="year"></span> Rizwaan Zahid - Marketing & Communications Portfolio</p>
   </footer>
+
+  <script async src="//www.instagram.com/embed.js"></script>
   <script>
     const y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav');
+    
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
   </script>
 </body>
 </html>
