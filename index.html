@@ -1,104 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Rizwaan Zahid | Marketing & Communications</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rizwaan Zahid | Marketing & Communications</title>
   <meta name="description" content="Creative campaigns, strategic communications, and data-driven marketing that delivers results." />
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
+    /* Reset */
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
     body {
-      margin: 0 auto;
-      max-width: 960px;
-      padding: 0 20px 60px;
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      color: #333333;
-      background-color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #24292f;
+      background-color: white;
+      line-height: 1.5;
+      margin: 2rem auto 4rem;
+      max-width: 50rem;
+      padding: 0 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+
     a {
-      color: #007acc;
+      color: #0366d6;
       text-decoration: none;
     }
     a:hover, a:focus {
-      color: #005fa3;
       text-decoration: underline;
     }
-    header.site-header {
-      padding: 20px 0;
-      border-bottom: 2px solid #007acc;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 1rem;
     }
-    header.site-header .brand {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #007acc;
-      text-decoration: none;
-    }
-    nav.site-nav a {
-      padding: 8px 16px;
-      margin-left: 1.5rem;
-      font-weight: 600;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      transition: color 0.3s ease;
-    }
-    section.section {
-      margin: 3rem 0;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #ddd;
-    }
-    section.section h2 {
-      font-size: 2rem;
+    header h1 {
       font-weight: 800;
-      letter-spacing: 1px;
-      color: #007acc;
+      font-size: 2.25rem;
+      margin-bottom: 0.25rem;
+      color: #24292f;
+    }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    section h2 {
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.5rem;
+      color: #24292f;
+    }
+
+    p, ul {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #586069;
+    }
+    ul {
+      padding-left: 1.25rem;
       margin-bottom: 1rem;
     }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2.5rem;
-      max-width: 600px;
-      margin: 2rem auto 0;
-      font-size: 1.2rem;
+    ul li {
+      margin-bottom: 0.5rem;
     }
-    iframe, video, embed {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      border: none;
-      margin-top: 1rem;
+
+    /* Work section styling */
+    #work div {
+      margin-bottom: 2.5rem;
     }
-    iframe { height: 850px; }
-    video { max-height: 480px; }
+
     img.clickable-img {
-      max-width: 300px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      max-width: 100%;
+      max-height: 14rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.25rem 0.5rem rgb(27 31 35 / 0.15);
+      transition: box-shadow 0.2s ease;
       cursor: pointer;
-      transition: transform 0.3s ease;
+      display: block;
+      margin-bottom: 0.75rem;
     }
     img.clickable-img:hover {
-      transform: scale(1.05);
+      box-shadow: 0 0.4rem 1rem rgb(27 31 35 / 0.3);
     }
-    footer.site-footer {
-      margin-top: 4rem;
+
+    video, iframe, embed {
+      max-width: 100%;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.25rem 0.5rem rgb(27 31 35 / 0.15);
+      border: none;
+      margin-top: 0.75rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.25rem;
+      font-size: 1.05rem;
+      margin-top: 1rem;
+    }
+
+    footer {
       text-align: center;
-      color: #888;
-      font-size: 1rem;
-      padding-bottom: 1rem;
+      color: #6a737d;
+      font-size: 0.95rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <a href="#top" class="brand">Rizwaan Zahid</a>
-    <nav class="site-nav" aria-label="Primary navigation">
+  <header>
+    <h1>Rizwaan Zahid</h1>
+    <nav>
       <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
@@ -106,30 +128,22 @@
     </nav>
   </header>
 
-  <main id="top">
-
-    <section class="hero section">
-      <div class="hero-inner">
-        <h1>Marketing & Communications</h1>
-        <p class="sub">Creative campaigns, strategic communications, and data-driven marketing that delivers results.</p>
-      </div>
-    </section>
-
-    <section id="about" class="section">
+  <main>
+    <section id="about">
       <h2>About</h2>
       <p>Marketing and communications professional specializing in integrated campaigns, brand storytelling, and digital strategy that drives engagement and measurable business outcomes.</p>
     </section>
 
-    <section id="work" class="section">
+    <section id="work">
       <h2>Selected Work</h2>
-
+      
       <div>
         <h3>Iron Ring Campaign</h3>
         <a href="assets/iron-ring-poster.jpg" target="_blank" rel="noopener">
-          <img src="assets/iron-ring-poster.jpg" alt="Iron Ring Poster" class="clickable-img" />
+          <img src="assets/iron-ring-poster.jpg" alt="Iron Ring Campaign Poster" class="clickable-img" />
         </a>
         <p>Watch the Reel:</p>
-        <video controls>
+        <video controls preload="metadata">
           <source src="assets/iron-ring-reel.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -137,7 +151,7 @@
 
       <div>
         <h3>WEIIT Impact Report</h3>
-        <embed src="assets/wieit-impact-report.pdf" type="application/pdf" style="height: 850px;" />
+        <embed src="assets/wieit-impact-report.pdf" type="application/pdf" style="height: 700px;" />
       </div>
 
       <div>
@@ -147,12 +161,11 @@
 
       <div>
         <h3>USC - Hard to Study When You're Hungry Campaign</h3>
-        <iframe src="https://player.vimeo.com/video/818420627" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="border-radius: 8px;"></iframe>
+        <iframe src="https://player.vimeo.com/video/818420627" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="border-radius: 0.5rem;"></iframe>
       </div>
-
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact">
       <h2>Contact</h2>
       <div class="contact-grid">
         <div>
@@ -170,13 +183,13 @@
       </div>
     </section>
 
-    <section id="resume" class="section">
+    <section id="resume">
       <h2>Resume</h2>
-      <embed src="assets/resume.pdf" type="application/pdf" style="height: 850px;" />
+      <embed src="assets/resume.pdf" type="application/pdf" style="height: 700px;" />
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer>
     <p>© <span id="year"></span> Rizwaan Zahid - Marketing & Communications Portfolio</p>
   </footer>
 
