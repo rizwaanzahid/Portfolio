@@ -79,7 +79,7 @@
       max-width: 600px;
       margin: auto;
     }
-    iframe, video {
+    iframe, video, embed {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
@@ -88,6 +88,17 @@
     }
     iframe { height: 850px; }
     video { max-height: 480px; }
+    img.clickable-img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    img.clickable-img:hover {
+      transform: scale(1.05);
+    }
     footer.site-footer {
       text-align: center;
       margin: 3rem 1rem;
@@ -102,8 +113,8 @@
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#work">Work</a>
-      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
+      <a href="#resume">Resume</a>
     </nav>
   </header>
 
@@ -125,30 +136,20 @@
       <h2>Selected Work</h2>
 
       <div>
-        <h3>Course Development</h3>
-        <p>ECON 1002 - Introduction to Macroeconomics</p>
-        <p>Developed and managed a course in Brightspace LMS with comprehensive online modules, quizzes, and student support materials aligned to adult learning principles and organizational priorities.</p>
-        <a href="assets/canch4-recap.pdf" target="_blank" rel="noopener">View Course Recap PDF</a>
-      </div>
-
-      <div>
         <h3>Iron Ring Campaign</h3>
-        <img src="assets/iron-ring-poster.jpg" alt="Iron Ring Poster" style="max-width:100%; height:auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);" />
+        <a href="assets/iron-ring-poster.jpg" target="_blank" rel="noopener">
+          <img src="assets/iron-ring-poster.jpg" alt="Iron Ring Poster" class="clickable-img" />
+        </a>
         <p>Watch the Reel:</p>
-        <video controls style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+        <video controls>
           <source src="assets/iron-ring-reel.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
 
       <div>
-        <h3>Resume</h3>
-        <a href="assets/resume.pdf" target="_blank" rel="noopener">View Full Resume (PDF)</a>
-      </div>
-
-      <div>
         <h3>WEIIT Impact Report</h3>
-        <a href="assets/wieit-impact-report.pdf" target="_blank" rel="noopener">Download Impact Report (PDF)</a>
+        <embed src="assets/wieit-impact-report.pdf" type="application/pdf" style="height: 850px;" />
       </div>
 
       <div>
@@ -158,14 +159,10 @@
 
       <div>
         <h3>Additional Video</h3>
+        <p>USC - Hard to Study When You're Hungry Campaign</p>
         <iframe src="https://player.vimeo.com/video/818420627" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="border-radius: 8px;"></iframe>
       </div>
 
-    </section>
-
-    <section id="resume" class="section">
-      <h2>Resume</h2>
-      <iframe src="assets/resume.pdf" aria-label="Embedded Resume PDF"></iframe>
     </section>
 
     <section id="contact" class="section">
@@ -184,6 +181,11 @@
           Ottawa, ON
         </div>
       </div>
+    </section>
+
+    <section id="resume" class="section">
+      <h2>Resume</h2>
+      <embed src="assets/resume.pdf" type="application/pdf" style="height: 850px;" />
     </section>
   </main>
 
