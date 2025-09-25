@@ -18,7 +18,7 @@
 }
 
 .contact-grid a {
-  color: var(#007acc);
+  color: #007acc; /* Corrected color */
   text-decoration: none;
 }
 
