@@ -796,14 +796,13 @@
             <img src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/iron-ring-poster.jpg" alt="2025 Convocation Poster" onclick="openImageModal(this.src, this.alt)" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';" />
           </div>
           
-          <div class="work-item">
-            <h3>Iron Ring Campaign</h3>
-            <video controls preload="metadata">
-              <source src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/iron-ring-reel.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
+         <div class="work-item" style="aspect-ratio: 1 / 1; max-width:400px; margin:auto;">
+  <h3>Iron Ring Campaign</h3>
+  <video controls preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
+    <source src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/iron-ring-reel.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
         
         <!-- USC Video - Full Width -->
         <div class="work-item-full">
@@ -814,20 +813,15 @@
         </div>
         
         <!-- Bottom Row: Documents -->
-        <div class="work-grid-bottom">
-          <div class="work-item">
-            <h3>Writing Portfolio: Conference Recap</h3>
-            <embed src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/canch4-recap.pdf" type="application/pdf" style="height: 400px; width: 100%; flex-grow: 1;" />
-          </div>
+        <div class="work-item" style="height: 400px;">
+  <h3>Writing Portfolio: Conference Recap</h3>
+  <iframe src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/canch4-recap.pdf" style="width:100%; height:100%; border:none;" allowfullscreen></iframe>
+</div>
           
-          <div class="work-item">
-            <h3>Resume</h3>
-            <p><a href="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a></p>
-            <div class="pdf-container" style="flex-grow: 1;">
-              <iframe src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/resume.pdf#toolbar=0&navpanes=0"></iframe>
-            </div>
-          </div>
-        </div>
+      <div class="work-item" style="height: 400px;">
+  <h3>Resume</h3>
+  <iframe src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/resume.pdf#toolbar=0&navpanes=0" style="width:100%; height:100%; border:none;" allowfullscreen></iframe>
+</div>
       </section>
 
       <section id="contact" class="contact-section">
@@ -946,3 +940,4 @@
   </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'984f0c0915a4ebb4',t:'MTc1ODg1MDc2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
