@@ -407,7 +407,7 @@
       margin-bottom: var(--spacing-xs);
     }
     
-    .work-item img, .work-item video, .work-item iframe, .work-item embed {
+    .work-item img, .work-item video {
       width: 100%;
       border-radius: var(--border-radius-small);
       box-shadow: var(--shadow-light);
@@ -428,15 +428,6 @@
       object-fit: cover;
     }
     
-    .work-item iframe {
-      height: 300px;
-      border: none;
-    }
-    
-    .work-item embed {
-      height: 420px;
-    }
-    
     .work-item p {
       color: var(--text-secondary);
       line-height: 1.6;
@@ -455,31 +446,59 @@
       text-decoration: underline;
     }
     
-    .work-row {
-      display: flex;
-      gap: var(--spacing-lg);
-      align-items: flex-start;
-    }
-    
-    .work-col {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-sm);
-    }
-    
+    /* PDF Container Styles */
     .pdf-container {
-      height: 420px;
-      border-radius: var(--border-radius);
+      height: 500px;
+      border-radius: var(--border-radius-small);
       overflow: hidden;
       box-shadow: var(--shadow-light);
       background: white;
+      position: relative;
+      flex-grow: 1;
     }
     
-    .pdf-container iframe {
+    .pdf-viewer {
       width: 100%;
       height: 100%;
       border: none;
+      border-radius: var(--border-radius-small);
+    }
+    
+    .pdf-fallback {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background: #f8fafc;
+      border: 2px dashed #cbd5e0;
+      border-radius: var(--border-radius-small);
+      text-align: center;
+      padding: var(--spacing-lg);
+    }
+    
+    .pdf-fallback svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: var(--spacing-md);
+      color: #667eea;
+    }
+    
+    .pdf-fallback h4 {
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-sm);
+      font-size: 1.1rem;
+    }
+    
+    .pdf-fallback p {
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-md);
+      font-size: 0.9rem;
+    }
+    
+    .pdf-fallback .btn {
+      padding: var(--spacing-xs) var(--spacing-md);
+      font-size: 0.9rem;
     }
     
     .contact-section {
@@ -604,11 +623,6 @@
       .cards {
         grid-template-columns: repeat(3, 1fr);
       }
-      
-      .work-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-xl);
-      }
     }
     
     /* Responsive Design */
@@ -619,10 +633,6 @@
       
       .work-grid-top, .work-grid-bottom { 
         grid-template-columns: 1fr; 
-      }
-      
-      .work-row {
-        flex-direction: column;
       }
     }
     
@@ -698,7 +708,7 @@
       }
       
       .pdf-container {
-        height: 300px;
+        height: 400px;
       }
     }
   </style>
@@ -793,13 +803,13 @@
         <div class="work-grid-top">
           <div class="work-item">
             <h3>2025 Convocation</h3>
-            <img src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/iron-ring-poster.jpg" alt="2025 Convocation Poster" onclick="openImageModal(this.src, this.alt)" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';" />
+            <img src="https://rizwaanzahid.github.io/Portfolio/assets/iron-ring-poster.jpg" alt="2025 Convocation Poster" onclick="openImageModal(this.src, this.alt)" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';" />
           </div>
           
-          <div class="work-item" style="aspect-ratio: 1 / 1; max-width: 400px; margin: auto;">
+          <div class="work-item">
             <h3>Iron Ring Campaign</h3>
-            <video controls preload="metadata" style="width: 100%; height: 100%; object-fit: cover;" playsinline>
-              <source src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/iron-ring-reel.mp4" type="video/mp4" />
+            <video controls preload="metadata">
+              <source src="https://rizwaanzahid.github.io/Portfolio/assets/iron-ring-reel.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -815,14 +825,40 @@
         
         <!-- Bottom Row: Documents -->
         <div class="work-grid-bottom">
-          <div class="work-item" style="height: 400px;">
+          <div class="work-item">
             <h3>Writing Portfolio: Conference Recap</h3>
-            <iframe src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/canch4-recap.pdf" style="width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+            <div class="pdf-container">
+              <iframe class="pdf-viewer" 
+                      src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://rizwaanzahid.github.io/Portfolio/assets/canch4-recap.pdf" 
+                      title="Conference Recap PDF">
+              </iframe>
+              <div class="pdf-fallback">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                </svg>
+                <h4>Conference Recap Document</h4>
+                <p>Click below to view the full document</p>
+                <a href="https://rizwaanzahid.github.io/Portfolio/assets/canch4-recap.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📄 View PDF</a>
+              </div>
+            </div>
           </div>
           
-          <div class="work-item" style="height: 400px;">
+          <div class="work-item">
             <h3>Resume</h3>
-            <iframe src="https://raw.githubusercontent.com/rizwaanzahid/portfolio/main/assets/resume.pdf#toolbar=0&navpanes=0" style="width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+            <div class="pdf-container">
+              <iframe class="pdf-viewer" 
+                      src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://rizwaanzahid.github.io/Portfolio/assets/resume.pdf" 
+                      title="Resume PDF">
+              </iframe>
+              <div class="pdf-fallback">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                </svg>
+                <h4>Resume & CV</h4>
+                <p>Download or view my complete resume</p>
+                <a href="https://rizwaanzahid.github.io/Portfolio/assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📄 View Resume</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -940,6 +976,39 @@
         }
       });
     });
+
+    // PDF Viewer fallback handling
+    document.addEventListener('DOMContentLoaded', function() {
+      const pdfViewers = document.querySelectorAll('.pdf-viewer');
+      
+      pdfViewers.forEach((iframe) => {
+        // Set up error handling
+        iframe.addEventListener('error', function() {
+          showPdfFallback(iframe);
+        });
+        
+        // Check if PDF loaded successfully after a delay
+        setTimeout(() => {
+          try {
+            // If we can't access the iframe content, it might be blocked
+            if (!iframe.contentDocument && !iframe.contentWindow) {
+              // This could mean CORS is blocking it, but PDF.js might still work
+              // We'll only show fallback if there's a real loading error
+            }
+          } catch (e) {
+            // Cross-origin error is expected with PDF.js, so don't show fallback
+          }
+        }, 5000);
+      });
+      
+      function showPdfFallback(iframe) {
+        const fallback = iframe.nextElementSibling;
+        if (fallback && fallback.classList.contains('pdf-fallback')) {
+          iframe.style.display = 'none';
+          fallback.style.display = 'flex';
+        }
+      }
+    });
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'984f0c0915a4ebb4',t:'MTc1ODg1MDc2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'984f4a25f0ef2659',t:'MTc1ODg1MzMwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
