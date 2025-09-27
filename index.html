@@ -477,12 +477,28 @@
           </div>
 <div class="work-item" style="max-width: 540px; margin: 0 auto;">
   <h3>Iron Ring Campaign Video</h3>
-  <div style="position: relative; width: 100%; padding-bottom: 125%; height: 0;">
-    <video controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-      <source src="https://rizwaanzahid.github.io/Portfolio/assets/iron-ring-reel.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+  <div style="text-align: center;">
+      <h4 style="margin-bottom: 15px; color: #666;">Campaign Video</h4>
+      <div style="position: relative; width: 100%; padding-bottom: 125%; height: 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <video controls="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+          <source src="https://rizwaanzahid.github.io/Portfolio/assets/iron-ring-reel.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
   </div>
+  
+  <!-- Mobile responsive layout -->
+  <style>
+    @media (max-width: 768px) {
+      .iron-ring-section div[style*="grid-template-columns"] {
+        display: block !important;
+      }
+      .iron-ring-section div[style*="grid-template-columns"] > div {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
 </div>
 
         </div>
@@ -558,6 +574,7 @@
   </script>
 </body>
 </html>
+
 
 
 
