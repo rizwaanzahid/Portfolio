@@ -6,6 +6,71 @@
   <title>Rizwaan Zahid | Marketing & Communications</title>
   <meta name="description" content="Creative campaigns, strategic communications, and data-driven marketing that delivers results." />
   <style>
+
+  .work-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: white;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+    
+    .skills-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  padding: 2rem 1.5rem;
+  min-width: 260px;
+  flex: 1 1 285px;
+  max-width: 360px;
+}
+
+.skill-card h2 {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.skill-card ul {
+  color: var(--text-secondary);
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+  font-size: 1.01rem;
+  line-height: 1.7;
+}
+
+.tags {
+  margin-top: 0.5rem;
+}
+
+.tag { 
+  display: inline-block; 
+  background: #eceffb; 
+  color: #667eea; 
+  border-radius: 1.5em; 
+  padding: 0.18em 0.85em; 
+  margin: 0.12em; 
+  font-size: 0.91em;
+}
+
+@media (max-width: 900px) {
+  .skills-row {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+  }
+}
+
     body {
       box-sizing: border-box;
     }
@@ -728,6 +793,44 @@
         height: 500px;
       }
     }
+
+    .about-section {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-section img {
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 20px #667eea33;
+}
+
+.about-section .about-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: .5rem;
+  line-height: 1.1;
+}
+
+.about-section p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  color: #444b63;
+  font-size: 1.12rem;
+  line-height: 1.6;
+}
+
   </style>
 </head>
 <body>
@@ -757,72 +860,69 @@
     </nav>
     
     <main>
-      <section id="about" class="section" style="text-align:center; margin-bottom: var(--spacing-2xl);">
-  <img 
-    src="https://media.licdn.com/dms/image/v2/D4E03AQHlQoyWcS2Zzg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707762258460?e=1761782400&v=beta&t=6tKhb8L7a5YKgf5H6lVXZEmSC2KEt_bHaaRe6lSUm3g"
-    alt="Rizwaan Zahid"
-    style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem auto; display: block; box-shadow: 0 4px 20px rgba(102,126,234,0.1);" />
-  <h2 class="section-title" style="font-size:2.2rem; font-weight:800; color:white; margin-bottom: .5rem; line-height:1.1;">About Me</h2>
-  <p style="max-width:520px; margin:0 auto 2.2rem auto; color:#dee0f3; font-size:1.09rem; line-height:1.5;">
+<section class="about-section">
+  <img src="https://media.licdn.com/dms/image/D4E03AQHlQoyWcS2Zzg/profile-displayphoto-shrink_800_800/0/1707762258460?e=1761782400&v=beta&t=6tKhb8L7a5YKgf5H6lVXZEmSC2KEtbHaaRe6lSUm3g" alt="Rizwaan Zahid">
+  <div class="about-title">About Me</div>
+  <p>
     I am a strategic marketing and communications specialist passionate about crafting compelling brand stories and data-driven campaigns that deliver measurable impact. With experience in market research, content creation, and digital advertising, I thrive in dynamic environments that prize innovative thinking and collaboration. Experienced in leading multi-channel campaigns, managing social media, and analyzing performance data, I am confident in my ability to elevate brands and captivate audiences remotely.
   </p>
-  
-  <h2 class="section-title" style="margin-bottom: 2rem; color:white;">What I Do</h2>
-  <div class="cards" style="justify-content: center;">
-    <!-- Skill cards go here (keep your existing .card elements) -->
+</section>
+
+<section>
+  <div class="work-title">What I Do</div>
+  <div class="skills-row">
+    <div class="skill-card">
+      <h2>Strategic Marketing</h2>
+      <ul>
+        <li>Brand positioning and messaging strategy</li>
+        <li>Market research and competitive analysis</li>
+        <li>Campaign planning and execution</li>
+        <li>Performance tracking and optimization</li>
+        <li>ROI measurement and reporting</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Strategy</span>
+        <span class="tag">Analytics</span>
+        <span class="tag">Growth</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h2>Communications</h2>
+      <ul>
+        <li>Content creation and copywriting</li>
+        <li>Social media management</li>
+        <li>Public relations and media outreach</li>
+        <li>Internal communications</li>
+        <li>Crisis communication planning</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Content</span>
+        <span class="tag">Social Media</span>
+        <span class="tag">PR</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h2>Creative Campaigns</h2>
+      <ul>
+        <li>Multi-channel campaign development</li>
+        <li>Visual identity and brand guidelines</li>
+        <li>Digital advertising and PPC</li>
+        <li>Email marketing automation</li>
+        <li>Event marketing and promotions</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Creative</span>
+        <span class="tag">Digital</span>
+        <span class="tag">Automation</span>
+      </div>
+    </div>
   </div>
 </section>
-          <div class="card">
-            <h2>
-              <div class="card-icon">📈</div>
-              Strategic Marketing
-            </h2>
-            <ul>
-              <li>Brand positioning and messaging strategy</li>
-              <li>Market research and competitive analysis</li>
-              <li>Campaign planning and execution</li>
-              <li>Performance tracking and optimization</li>
-              <li>ROI measurement and reporting</li>
-            </ul>
-            <div class="tag">Strategy</div>
-            <div class="tag">Analytics</div>
-            <div class="tag">Growth</div>
-          </div>
-          
-          <div class="card">
-            <h2>
-              <div class="card-icon">💬</div>
-              Communications
-            </h2>
-            <ul>
-              <li>Content creation and copywriting</li>
-              <li>Social media management</li>
-              <li>Public relations and media outreach</li>
-              <li>Internal communications</li>
-              <li>Crisis communication planning</li>
-            </ul>
-            <div class="tag">Content</div>
-            <div class="tag">Social Media</div>
-            <div class="tag">PR</div>
-          </div>
-          
-          <div class="card">
-            <h2>
-              <div class="card-icon">🎨</div>
-              Creative Campaigns
-            </h2>
-            <ul>
-              <li>Multi-channel campaign development</li>
-              <li>Visual identity and brand guidelines</li>
-              <li>Digital advertising and PPC</li>
-              <li>Email marketing automation</li>
-              <li>Event marketing and promotions</li>
-            </ul>
-            <div class="tag">Creative</div>
-            <div class="tag">Digital</div>
-            <div class="tag">Automation</div>
-          </div>
-        </div>
+
+
+      
+  
+  
       </section>
       
       <section id="work" class="section">
@@ -836,6 +936,8 @@
           </div>
           
           <div class="work-item">
+
+            
             <h3>Iron Ring Campaign</h3>
             <div class="instagram-container">
               <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DHwZye4xgDe/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
@@ -1073,4 +1175,5 @@
   <script async src="//www.instagram.com/embed.js"></script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'984f6bb4e70936b2',t:'MTc1ODg1NDY3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
